@@ -10,6 +10,7 @@ import { EstadoCuentaTab, FacturasCfdiTab, LedesTab } from '@/components/Cobranz
 import { cn } from '@/lib/utils'
 import { CALENDAR_URL } from '@/lib/api'
 import { useTheme } from '@/lib/ui'
+import { MenuButton } from '@/components/MenuButton'
 
 type Modal = { isOpen: boolean; type: StatusModalType; title: string; message: string }
 const TABS = [
@@ -66,6 +67,7 @@ function App() {
               <div className="flex items-center gap-3">
                 <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Cobranza</h1>
                 <ThemeMenu theme={theme} setTheme={setTheme} />
+                <MenuButton />
               </div>
               <p className="text-slate-500 text-sm mt-0.5">Estado de cuenta por cliente, facturas con su CFDI y archivo LEDES</p>
             </div>
